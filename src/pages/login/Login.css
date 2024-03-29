@@ -1,0 +1,83 @@
+:root{
+    --color-blue: #e12d3d;
+    --bg-w: #f3f8fe;
+    --bg-r: linear-gradient(to left, #dc3545, #e12d3d, #e62535, #eb1b2c, #ef0d22);
+    --bg-gradient: linear-gradient(to left top, #6f83fe, #7e79ff, #916dff, #a45dff, #b948fa);
+}
+.login-account{
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.login-account .form {
+    display: grid;
+    padding: 0rem 5rem;
+    text-align: center;
+    min-height: 100vh;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.login-account .form h3{
+    color: var(--color-blue);
+    font-size: 2rem;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
+.login-account .form input{
+    border: none;
+    outline: none;
+    background: var(--bg-w);
+    border-left: 3px solid var(--color-blue);
+    padding: 0.5rem 1rem ;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+.login-account .form input[type="submit"]{
+    color: white;
+    text-transform: uppercase;
+    background-image: linear-gradient(to left, #dc3545, #e12d3d, #e62535, #eb1b2c, #ef0d22);
+    border-radius: 50rem;
+    font-size: 1.3rem;
+    margin: 2rem 0rem;
+}
+.login-account .form input[type="submit"]:hover{
+    background-image: linear-gradient(to left, #dc3545, #e12d3d, #e62535, #eb1b2c, #ef0d22);
+}
+.login-account .form .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login-account .form .flex i , .login-account .form .flex a{
+    color: var(--color-blue);
+}
+.img-relative img{
+    height: 100%;
+}
+.img-relative{
+    position: relative;
+}
+.img-relative .img-absolute{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    top: 0;
+    text-align: center;
+} 
+.img-relative .img-absolute h2{
+    color: white;
+    font-size: 4rem;
+    font-weight: 600;
+}
+@media only screen and (max-width: 600px){
+    .login-account .form {
+        padding: 0rem 2rem;
+    }
+}
+

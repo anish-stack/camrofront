@@ -1,0 +1,290 @@
+/* ------- Single Product [PAGE] -------  */
+/* .product-page .slick-slide .img{
+    margin: 0rem 1rem;
+} */
+.slide-show .slick-slide {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color-1);
+}
+
+.slide-show img {
+    /* width: 60%; */
+    object-fit: contain;
+}
+
+.slider-nav {
+    margin-top: 0.5rem;
+}
+
+.slider-nav .img {
+    margin: 0rem 1rem;
+}
+
+
+.product-page .details {
+    padding-left: 15%;
+}
+
+.product-page .details .pricing {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.product-page .details h2 {
+    color: var(--color-red-1);
+}
+
+.product-page .details .pricing p {
+    font-weight: 500;
+    color: black;
+}
+
+.product-page .details .size-btns {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-page .details .size-btns button {
+    outline: none;
+    background: var();
+    border: 1px solid var(--color-main);
+    padding: 0.5rem 1rem;
+    border-radius: 50rem;
+}
+
+.product-page .details .size-btns button.active {
+    background: red;
+    color: white;
+}
+
+.product-page .details .pricing .actual-price {
+    color: var(--color-red-1);
+}
+
+.product-page .details .pricing .cut-price {
+    text-decoration: line-through;
+    font-size: 1rem;
+    color: var(--color-grey);
+}
+
+.product-page .details .main-btn {
+    width: 60%;
+}
+
+.product-page .details .btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+    margin: 0.8rem 0rem;
+}
+
+.product-page .details .btns .addToCart {
+    display: grid;
+    place-items: center;
+    background: var(--color-red);
+    width: 100%;
+}
+
+.product-page .details .btns .addToCart a {
+    color: white;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.product-page .details .buyNow {
+    width: 100%;
+    text-align: center;
+
+}
+
+.product-page .details .buyNow a {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    background-color: var(--color-red-1);
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+
+.product-page .quantity-input {
+    border: 2px solid var(--color-red-1);
+    /* background:  var(--color-red-1); */
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    justify-items: center;
+    align-items: center;
+    /* padding: 0.3rem 0.6rem; */
+}
+
+.product-page .quantity-input input {
+    outline: none;
+    border: none;
+    text-align: center;
+    background: transparent;
+    color: var(--color-red-1);
+}
+
+.product-page .quantity-input i {
+    background: var(--color-red-1);
+    color: white;
+    /* background: black; */
+    cursor: pointer;
+    padding: 0.7rem;
+    /* border-radius: 50rem; */
+    width: 100%;
+}
+
+.big-img {
+    width: 400px;
+    position: relative;
+
+    height: 400px;
+}
+
+.big-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.small-img::-webkit-scrollbar {
+    display: none;
+}
+
+.small-img {
+    position: absolute;
+    display: flex;
+    margin-top: 11px;
+    overflow-x: scroll;
+    max-width: 33%;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.small-img img {
+    width: 50px;
+}
+
+.product-desc-main {
+    border-top: 5px solid #f6f6f6;
+    padding-top: 2rem;
+    margin-top: 5rem;
+}
+
+.product-desc-main .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 1.5rem;
+    color: var(--color-main);
+    margin-bottom: 1rem;
+}
+
+.product-desc-main .tabs h4 {
+    position: relative;
+    transition: all 300ms ease-in;
+    cursor: pointer;
+}
+
+.product-desc-main .tabs h4::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    background: var(--color-main);
+    margin-top: 0.2rem;
+    height: 2px;
+    width: 0%;
+    transition: all 300ms ease-in;
+}
+
+.product-desc-main .tabs h4:hover::before {
+    width: 100%;
+}
+
+.product-desc-main .single-pill .text {
+    color: rgb(82, 80, 80);
+    font-size: 1rem;
+}
+
+.product-desc-main .single-pill h5 {
+    font-size: 1.2rem;
+    margin: 1rem 0rem;
+}
+
+.product-desc-main .single-pill ol {
+    padding-left: 2rem;
+}
+
+.product-desc-main .single-pill ol li {
+    list-style-type: decimal;
+    padding-bottom: 1rem;
+}
+
+.product-desc-main .single-pill ol strong {
+    font-weight: 500;
+}
+
+.product-desc-main .single-pill ol p {
+    color: black;
+}
+
+.product-desc-main .single-pill.pill2 table {
+    font-size: 1.2rem;
+}
+
+.product-desc-main .single-pill.pill2 table th {
+    color: var(--color-main);
+}
+
+
+@media only screen and (min-width: 1400px) {
+    .product-page {
+        padding: 0rem 10rem;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .product-page .details .main-btn {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .product-page .details {
+        padding-left: 0%;
+        margin-top: 2rem;
+    }
+    .big-img {
+        width: 100%;
+        position: relative;
+        height: 400px;
+    }
+    .small-img {
+        position: relative;
+        display: flex;
+        margin-top: 11px;
+        overflow-x: scroll;
+        max-width: 33%;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+    }
+    .product-desc-main .single-pill ol {
+        padding-left: 1rem;
+    }
+
+    .product-desc-main .single-pill.pill2 table {
+        font-size: 1rem;
+    }
+}

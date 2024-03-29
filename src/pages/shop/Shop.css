@@ -1,0 +1,98 @@
+
+/* ------------ SHOP [PAGE]  ------  */
+.bread-head h1{
+    text-align: center;
+    width: 100%;
+    background: var(--color-red-1);
+    font-weight: 500;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 0rem;
+}
+.bread-head h4{
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+
+
+/* -------- shop-side-view  -------  */
+.shop-side-view .bg-rounded{
+    background: var(--color-light-weight);
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.shop-side-view h5{
+    color: var(--color-main-light);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.shop-side-view h5::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    height: 1px;
+    width: 0%;
+    background: var(--color-main-light);
+    transition: all 400ms ease-in;
+}
+.shop-side-view h5:hover::before{
+    width: 60%;
+}
+.shop-side-view .all-categories ul li{
+    padding: 0.5rem 1rem;
+}
+.shop-side-view .all-categories ul li:hover{
+    background: white;
+    border-radius: 50rem;
+}
+.shop-side-view .all-categories ul li i{
+    color: var(--color-main-light);
+    font-size: 1rem;
+    padding-right: 0.5rem;
+}
+.shop-side-view .checkbox .form-check-input{
+    cursor: pointer;
+}
+.shop-side-view .checkbox .form-check-input:checked {
+    background-color: var(--color-main-light) ;
+    border-color: var(--color-main-light) ;
+}
+.shop-side-view .checkbox .form-check-input:focus {
+    border-color: var(--color-main-light);
+    box-shadow: 0 0 0 .25rem rgba(253, 109, 13, 0.25);
+}
+
+.product-lists.main-product.shop-page{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+}
+@media only screen and (max-width: 1100px){
+    .product-lists.main-product.shop-page{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media only screen and (max-width: 600px){
+    .product-lists.main-product.shop-page{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .shop-side-view .bg-rounded {
+        padding: 1rem 0.5rem;
+    }
+}
+
+
+
+
+
+
+
+

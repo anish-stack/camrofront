@@ -1,0 +1,5 @@
+@media only screen and (min-width: 1100px){
+    .product-lists.main-product.shop-page.grid-5{
+        grid-template-columns: repeat(5,1fr);
+    }
+}

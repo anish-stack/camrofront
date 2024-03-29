@@ -1,0 +1,143 @@
+/* -------------- Product Carousel ---  */
+.main-product{
+    width: 100%;
+}
+.main-product .product{
+    padding: 0.5rem;
+}
+.main-product a:hover{
+    color: inherit;
+}
+.main-product .product .img{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 400ms ease-in;
+}
+.main-product .product .img>img{
+    position: absolute;
+    object-fit: contain;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 400ms ease-in;
+}
+.main-product .product .img .property{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    /* background: #ff905a; */
+    color: white;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+.main-product .product .img .property.bestseller{
+    background: #ff905a;
+}
+.main-product .product .img .property.hotProduct{
+    background: rgb(31, 207, 31);
+}
+.main-product .product .img .property.topSelling{
+    background: rgb(239, 84, 84);
+}
+
+.main-product .product .img .front-img{
+    opacity: 0;
+}
+.main-product .product .img:hover .back-img{
+    opacity: 0;
+}
+.main-product .product .img:hover .front-img{
+    opacity: 1;
+}
+
+.main-product .product .product-name{
+    text-transform: uppercase;
+    color: black;
+}
+.main-product .product .sizes{
+    text-align: left;
+
+}
+.main-product .product .sizes small{
+    padding: 0rem 0.2rem;
+    border-radius: 2px;
+    border: 1px solid var(--color-grey);
+    margin-right: 0.3rem;
+    /* transition: all 400ms ease-in; */
+}
+.main-product .product .sizes small:hover{
+    border: 1px solid var(--color-main);
+    background: var(--color-main);
+    color: white;
+}
+.main-product .product .mrp{
+    display: flex;
+    align-items: center;
+}
+.main-product .product .mrp strong{
+    font-weight: 400;
+    color: var(--color-main);
+}
+.main-product .product .mrp .original-price{
+    color: var(--color-main);
+    margin-right: 0.5rem;
+}
+.main-product .product .mrp .cut-price{
+    text-decoration: line-through;
+}
+.main-product .product .grid-btn{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+.main-product .product .grid-btn .addToCart{
+    color: white;
+    background: var(--color-main-light);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 300ms ease-in;
+    margin-top: 0.5rem;
+}
+.main-product .product .grid-btn .addToCart:hover{
+    background: var(--color-main);
+}
+.main-product .product .product-name {
+    text-align: start;
+    display: block;
+    font-size: 1rem;
+}
+@media only screen and (max-width: 800px) {
+    .main-product .product .img .property {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .main-product .product .img .property {
+        font-size: 0.8rem;
+    }
+    .main-product .product .img {
+        height: 150px;
+    }
+    .main-product .product .product-name {
+        text-align: start;
+        display: block;
+        font-size: 1rem;
+    }
+    .main-product .product .mrp {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+    }
+    .main-product .product .grid-btn .addToCart {
+        font-size: 1rem;
+    }
+}

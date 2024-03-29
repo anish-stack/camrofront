@@ -1,0 +1,63 @@
+/* ------- footer ----  */
+footer{
+    margin-top: 5rem;    
+    /* background: #f3f3f3; */
+    padding: 1rem 5rem;
+    border-top: 1px solid #b9b7b7;
+}
+footer .col-md-3 .logo{
+    width: 100px;
+    margin-bottom: 2rem;
+}
+footer .col-md-3 p strong{
+    color: var(--color-main);
+    font-weight: 500;
+}
+footer .col-md-3 p a:hover{
+    color: var(--color-main);
+}
+footer .col-md-3 .icon{
+    color: var(--color-main);
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+footer .col-md-3 .head{
+    font-size: 1.2rem;
+    color: var(--color-main);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+footer .col-md-3 ul li{
+    padding-bottom: 0.5rem;
+    font-weight: 400;
+}
+footer .col-md-3 ul li a{
+    transition: all 200ms ease-in;
+}
+footer .col-md-3 ul li a:hover{
+    color: var(--color-main);
+    margin-left: 0.8rem;
+}
+footer .copyright{
+    border-top: 1px solid var(--color-main);
+    padding-top: 1rem;
+}
+footer .copyright p{
+    color: rgb(49, 46, 46);
+}
+footer .copyright a{
+    color: var(--color-main);
+}
+
+@media only screen and (max-width: 700px){
+    footer{
+        padding: 1rem 3rem;
+    }
+}
+@media only screen and (max-width: 550px){
+    footer{
+        padding: 1rem 1rem;
+        margin-top: 1rem;
+    }
+}

@@ -1,0 +1,21 @@
+.page-breadcrumb{
+    background: var(--color-red-1);
+    border-top: 1px solid white;
+    text-align: center;
+    padding: 3rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page-breadcrumb h2{
+    color: white;
+}
+.page-breadcrumb ol li a{
+    color: white;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    color: white;
+}
+.breadcrumb-item.active {
+    color: #efefef;
+}

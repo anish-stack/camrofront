@@ -1,0 +1,48 @@
+.subhead{
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.subhead p{
+    text-transform: capitalize;
+}
+.subheading{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-transform: capitalize;
+ 
+}
+.subheading h2 {
+    background: var(--color-main);
+    color: white;
+    width: max-content;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+.subheading:before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: var(--color-main);
+    top: -moz-calc(50% - 0.5px);
+    top: -webkit-calc(50% - 0.5px);
+    top: -ms-calc(50% - 0.5px);
+    top: calc(50% - 0.5px);
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px){
+    .subheading h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+}

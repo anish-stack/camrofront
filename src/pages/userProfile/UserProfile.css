@@ -1,0 +1,100 @@
+.profile-page .bg-rounded{
+    padding: 1rem 0.5rem;
+    background: var(--color-light-weight);
+    border-radius: 5px;
+    margin: 1rem 0rem;
+}
+
+.profile-page .profile-detail .single{
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.profile-page .profile-detail .single i{
+    background: var(--color-main);
+    color: white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+}
+.profile-page .profile-detail .single p{
+    color: black;
+}
+.profile-page .profile-detail .single .name{
+    text-transform: uppercase;
+}
+
+.profile-page .btns-tab-list{
+    background: white;
+    border-radius: 50rem;
+    overflow: hidden;
+    width: max-content;
+}
+.profile-page .nav-tabs{
+    border-bottom: 0rem;
+}
+.profile-page .nav-tabs .nav-link{
+    color: black;
+}
+.profile-page .nav-tabs .nav-link.active {
+    color: #495057;
+    color: white;
+    background-color: var(--color-main);
+    border: none;
+}
+
+/* --- max-table  ---  */
+.profile-page .max-table{
+    overflow-x: auto;
+}
+.profile-page .max-table .table{
+    border-color: white;
+    min-width: 520px;
+}
+.profile-page .max-table .table .product-des{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.profile-page .max-table .table .product-des img{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    object-fit:contain;
+}
+.profile-page .max-table .table .status{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.profile-page .max-table .table .status span{
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: var(--color-orange);
+}
+.profile-page .max-table .table .status .shipped{
+    background: yellowgreen;
+}
+.profile-page .max-table .table .status .cancel{
+    background: red;
+}
+.profile-page .max-table .table .view{
+    text-align: center;
+}
+.profile-page .max-table .table .view i{
+    padding: 0.2rem;
+    color: white;
+    background: greenyellow;
+}
+
+
+
+
+

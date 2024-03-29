@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a:hover {
+    color: inherit;
+}
+
+.rel {
+    position: relative;
+    left: 38pc;
+}
+
+@media screen and (max-width:768px) {
+    .rel {
+        position: relative;
+        left: 5pc;
+    }
+}
+.buttonview{
+    background-color: var(--color-main);
+    padding: 0.9rem 3rem;
+    color: white;
+}
+.buttonview:hover{
+    color: wheat;
+}
+.btnsc{
+    text-align: center;
+    margin-top: 22px;
+
+}
