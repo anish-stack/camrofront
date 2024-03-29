@@ -39,7 +39,7 @@ const Footer = () => {
               <div className="head">Follow us </div>
               <div className='flex mr-2 mb-3 md:flex-col items-start'>
                 <a href="https://www.instagram.com/camrosteel?igsh=NmtrZGY3Zms2b2N6" className="icon"><i className="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/CamroSteels?mibextid=ZbWKwL className="icon"><i className="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.facebook.com/CamroSteels?mibextid=ZbWKwL" className="icon"><i className="fa-brands fa-square-facebook"></i></a>
                 <a href="https://youtube.com/@utensil_camrosteel?si=Gym2MWKq5WQLtGj8" className="icon"><i className="fa-brands fa-twitter"></i></a>
                 <a href="#" className="icon"><i className="fa-brands fa-whatsapp"></i></a>
               </div>
