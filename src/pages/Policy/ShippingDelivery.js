@@ -36,7 +36,7 @@ const ShippingDelivery = () => {
       </p>
       <h2 className="text-2xl font-semibold mb-2">2. Delivery Time</h2>
       <p className="mb-4">
-        We strive to process and dispatch orders within [X] business days of receiving payment. Delivery times may vary depending on your location and the shipping method chosen. You will receive a tracking number once your order has been dispatched.
+        We strive to process and dispatch orders within 2-3 business days of receiving payment. Delivery times may vary depending on your location and the shipping method chosen. You will receive a tracking number once your order has been dispatched.
       </p>
       <h2 className="text-2xl font-semibold mb-2">3. International Shipping</h2>
       <p className="mb-4">

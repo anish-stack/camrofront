@@ -16,8 +16,10 @@ const Footer = () => {
               </p>
               <p>
                 <strong>Contact Us :</strong>
-                <a to="tel:+919876543210">+91-8595722922</a>
+                <a href="tel:+918595722922 ">+91-8595722922</a>
+              
               </p>
+              <p>   <strong>Email :</strong>  <a href='mailto:camrocookerpvtltd@gmail.com'>camrocookerpvtltd @gmail.com</a></p>
               {/* <a to="" className="icon"><i className="fa-brands fa-instagram"></i></a>
               <a to="" className="icon"><i className="fa-brands fa-square-facebook"></i></a>
               <a to="" className="icon"><i className="fa-brands fa-twitter"></i></a>

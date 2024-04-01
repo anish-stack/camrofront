@@ -26,7 +26,7 @@ const ReturnAndRefund = () => {
       <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-semibold mb-4">Return & Refund Policy</h1>
       <p className="mb-4">
-        We want you to be completely satisfied with your purchase from CAMRO - Stainless Steel World. If you are not satisfied with your purchase for any reason, you may return it for a refund or exchange within [X] days of receiving your order.
+        We want you to be completely satisfied with your purchase from CAMRO - Stainless Steel World. If you are not satisfied with your purchase for any reason, you may return it for a refund or exchange within 4-5 days of receiving your order.
       </p>
       <h2 className="text-2xl font-semibold mb-2">1. Return Eligibility</h2>
       <p className="mb-4">
