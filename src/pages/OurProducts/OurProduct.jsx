@@ -47,10 +47,16 @@ const OurProducts = () => {
 
                                         ))}
                                     </div>
-                                    <div className="mrp">
-                                        <div className="original-price">₹{item.originalPrice}</div>
-                                        <small className="cut-price">₹{item.discoPrice}</small>
+                                    <div className="sizes">
+                                        {item.sizes.length > 0 && (
+                                            <div className="mrp">
+                                                <div className="original-price">₹{item.sizes[0].originalPrice}</div>
+                                                <div className="cut-price">₹{item.sizes[0].discoPrice}</div>
+                                            </div>
+                                        )}
                                     </div>
+
+                                  
                                     <div className="grid-btn">
                                         <a href="javascript:void(0)" className="addToCart">Add to Cart <i className="fa-solid fa-cart-shopping"></i></a>
                                         {/* <Link to='' className="Wishlist"><i className="fa-regular fa-heart"></i></Link> */}

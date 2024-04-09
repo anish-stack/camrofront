@@ -123,9 +123,10 @@ const HotProducts = () => {
             const response = await axios.get("https://api.camrosteel.com/api/v1/all-product");
             console.log(response.data.data);
             const productss = response.data.data
-            const filterProduct = productss.filter((item)=>item.property==="Hot Product"
+            const filterProduct = productss.filter((item)=>item.property==="Hot-Product"
              ) 
             setProductData(filterProduct)
+            console.log("hot",filterProduct)
         } catch (error) {
             console.log(error);
         }
@@ -180,7 +181,7 @@ const HotProducts = () => {
 
                                         <img loading="lazy" decoding="async" src={item.images[0].img} onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }} className="front-img" alt="" />
                                         <img loading="lazy" decoding="async" src={item.images[1].img} onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }} className="back-img" alt="" />
-                                        <span className={`property ${item.property === "Top Selling" ? 'topSelling' : ''} ${item.property === "Trending" ? 'topSelling' : ''} ${item.property === "New Arrival" ? 'bestseller' : ''} ${item.property === "Hot Product" ? 'hotProduct' : ''} ${item.property === "" ? 'p-0' : ''}`}>{item.property}</span>
+                                        <span className={`property ${item.property === "Top Selling" ? 'topSelling' : ''} ${item.property === "Trending" ? 'topSelling' : ''} ${item.property === "New Arrival" ? 'bestseller' : ''} ${item.property === "Hot-Product" ? 'hotProduct' : ''} ${item.property === "" ? 'p-0' : ''}`}>{item.property}</span>
                                     </div>
                                     <div className="product-name">{item.productName}</div>
                                     <div className="sizes" key={index}>
@@ -190,8 +191,12 @@ const HotProducts = () => {
                                         ))}
                                     </div>
                                     <div className="mrp">
-                                        <div className="original-price">₹{item.originalPrice}</div>
-                                        <small className="cut-price">₹{item.discoPrice}</small>
+                                        {item.sizes.length > 0 && (
+                                            <div className="mrp">
+                                                <div className="original-price">₹{item.sizes[0].originalPrice}</div>
+                                                <div className="cut-price">₹{item.sizes[0].discoPrice}</div>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="grid-btn">
                                         <a href="javascript:void(0)" className="addToCart">Add to Cart <i className="fa-solid fa-cart-shopping"></i></a>
