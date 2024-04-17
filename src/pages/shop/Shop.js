@@ -10,7 +10,7 @@ const Shop = () => {
       behavior: 'smooth'
     });
   }, []);
-  
+
   const [productData, setProductData] = useState([])
   const [categories, setcategories] = useState([])
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -63,11 +63,11 @@ const Shop = () => {
   // const handleBestsellersToggle = () => {
   //   setBestsellersOnly(!bestsellersOnly);
   // };
-  
+
   // const handleTopSellingToggle = () => {
   //   setTopSellingOnly(!topSellingOnly);
   // };
-  
+
   // const handleHotProductToggle = () => {
   //   setHotProductOnly(!hotProductOnly);
   // };
@@ -104,7 +104,7 @@ const Shop = () => {
       <section className="container mt-5">
 
         <div className="row">
-          <div className="col-md-3 shop-side-view">
+          <div className="col-md-2 shop-side-view">
             <div className="all-categories bg-rounded">
               <h5>CATEGORIES</h5>
 
@@ -125,26 +125,26 @@ const Shop = () => {
             </div>
 
             <div className="filter-options bg-rounded">
-      <h5>Filter Options</h5>
-      <div className="form-check">
-        <input className="form-check-input" type="checkbox" id="bestsellersCheckbox" checked={filterOptions.bestsellersOnly} onChange={() => handleFilterOptionChange('bestsellersOnly')} />
-        <label className="form-check-label" htmlFor="bestsellersCheckbox">
-          Show Bestsellers Only
-        </label>
-      </div>
-      <div className="form-check">
-        <input className="form-check-input" type="checkbox" id="topSellingCheckbox" checked={filterOptions.topSellingOnly} onChange={() => handleFilterOptionChange('topSellingOnly')} />
-        <label className="form-check-label" htmlFor="topSellingCheckbox">
-          Show Top Selling Only
-        </label>
-      </div>
-      <div className="form-check">
-        <input className="form-check-input" type="checkbox" id="hotProductCheckbox" checked={filterOptions.hotProductOnly} onChange={() => handleFilterOptionChange('hotProductOnly')} />
-        <label className="form-check-label" htmlFor="hotProductCheckbox">
-          Show Hot Product Only
-        </label>
-      </div>
-    </div>
+              <h5>Filter Options</h5>
+              <div className="form-check">
+                <input className="form-check-input" type="checkbox" id="bestsellersCheckbox" checked={filterOptions.bestsellersOnly} onChange={() => handleFilterOptionChange('bestsellersOnly')} />
+                <label className="form-check-label" htmlFor="bestsellersCheckbox">
+                  Show Bestsellers Only
+                </label>
+              </div>
+              <div className="form-check">
+                <input className="form-check-input" type="checkbox" id="topSellingCheckbox" checked={filterOptions.topSellingOnly} onChange={() => handleFilterOptionChange('topSellingOnly')} />
+                <label className="form-check-label" htmlFor="topSellingCheckbox">
+                  Show Top Selling Only
+                </label>
+              </div>
+              <div className="form-check">
+                <input className="form-check-input" type="checkbox" id="hotProductCheckbox" checked={filterOptions.hotProductOnly} onChange={() => handleFilterOptionChange('hotProductOnly')} />
+                <label className="form-check-label" htmlFor="hotProductCheckbox">
+                  Show Hot Product Only
+                </label>
+              </div>
+            </div>
             {/* <div className="availability bg-rounded">
               <h5>Availability</h5>
 
@@ -173,7 +173,7 @@ const Shop = () => {
 
                     <img loading="lazy" decoding="async" src={item.images[0].img} onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }} className="front-img" alt="" />
                     <img loading="lazy" decoding="async" src={item.images[1].img} onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }} className="back-img" alt="" />
-                    <span className={`property ${item.property === "Top Selling" ? 'topSelling' : ''} ${item.property === "bestseller" ? 'bestseller' : ''} ${item.property === "Hot Product" ? 'hotProduct' : ''} ${item.property === "" ? 'p-0' : ''}`}>{item.property}</span>
+                    <span className={`property ${item.property === "Top Selling" ? 'topSelling' : ''} ${item.property === "Trending" ? 'topSelling' : ''} ${item.property === "New Arrival" ? 'bestseller' : ''} ${item.property === "Hot Product" ? 'hotProduct' : ''} ${item.property === "" ? 'p-0' : ''}`}>{item.property}</span>
 
                   </div>
                   <div className="product-name">{item.productName}</div>
@@ -183,9 +183,16 @@ const Shop = () => {
 
                     ))}
                   </div>
+                  <p className='mt-[7px] w-full truncate whitespace-nowrap text-black text-start text-sm'>{item.Desc || "Best for Indian, Chinese dishes | Daily use"}</p>
+
                   <div className="mrp">
-                    <div className="original-price">₹{item.originalPrice}</div>
-                    <small className="cut-price">₹{item.discoPrice}</small>
+
+                    {item.sizes.length > 0 && (
+                      <div className="mrp">
+                        <div className="original-price">₹{item.sizes[0].discoPrice}</div>
+                        <div className="cut-price">₹{item.sizes[0].originalPrice}</div>
+                      </div>
+                    )}
                   </div>
                   <div className="grid-btn">
                     <a href="javascript:void(0)" className="addToCart">Add to Cart <i className="fa-solid fa-cart-shopping"></i></a>

@@ -15,6 +15,7 @@ const Login = () => {
         });
       }, []);
     const [loading, setLoading] = useState(false)
+    const CartItems = sessionStorage.getItem('cart');
     const [formData, setFormData] = useState({
         Email: "",
         Password: ""
@@ -36,7 +37,12 @@ const Login = () => {
             toast.success('Login SuccessFull')
             sessionStorage.setItem('token', response.data.token)
             sessionStorage.setItem('user', JSON.stringify(response.data.login))
-            window.location.href = "/"
+            if(CartItems.length > 0){
+                window.location.href="/Make-Order-Complete"
+            }else{
+
+                window.location.href = "/"
+            }
 
             setLoading(false)
         }

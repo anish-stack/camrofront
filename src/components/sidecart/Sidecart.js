@@ -78,11 +78,11 @@ const Sidecart = ({ cartOpen, handleCartClose }) => {
                     <div className="login-register">
                         <p>Get Started & grab best offers!</p>
                         {token ? (
-                            <Link to="/Your-Profile">
+                            <a href="/profile">
                                 <button>Profile</button>
-                            </Link>
+                            </a>
                         ) : (
-                            <Link to="/log-in" className="btn">Login / Register</Link>
+                            <a href="/log-in" className="btn">Login / Register</a>
                         )}
 
                     </div>

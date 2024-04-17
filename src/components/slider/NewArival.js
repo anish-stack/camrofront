@@ -196,8 +196,8 @@ const NewArrival = () => {
                                         
                                         {item.sizes.length > 0 && (
                                             <div className="mrp">
-                                                <div className="original-price">₹{item.sizes[0].originalPrice}</div>
-                                                <div className="cut-price">₹{item.sizes[0].discoPrice}</div>
+                                                <div className="original-price">₹{item.sizes[0].discoPrice}</div>
+                                                <div className="cut-price">₹{item.sizes[0].originalPrice}</div>
                                             </div>
                                         )}
                                     </div>

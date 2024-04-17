@@ -67,7 +67,7 @@ const SingleProduct = () => {
         } else {
             const selectedSize = active.size;
             const selectedQuantity = num;
-            const selectedPrice = active.originalPrice;
+            const selectedPrice = active.discoPrice;
             const productName = singleData.productName;
             const productId = singleData._id;
             const image = singleData.images[0].img; // Assuming you have an array of images and you want to save the first one
