@@ -35,14 +35,11 @@ const CategorySlider = () => {
             <Swiper
                 slidesPerView={1}
                 spaceBetween={20}
-                loop={true}
+           
                 pagination={{
                     clickable: false,
                 }}
-                autoplay={{
-                    delay: 1000,
-                    disableOnInteraction: false,
-                  }}
+                autoplay={true}
                 navigation={false}
                 breakpoints={{
                     300: {

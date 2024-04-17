@@ -34,7 +34,7 @@ const Sidecart = ({ cartOpen, handleCartClose }) => {
         sessionStorage.setItem('cart', JSON.stringify(updatedCart));
     };
 
-    const finalPrice = totalMRP + shippingFee;
+    const finalPrice = totalMRP
     const handleFinalCart = () => {
         // Create an array to store cart details
         const cartDetails = cart.map(item => {

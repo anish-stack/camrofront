@@ -183,13 +183,17 @@ const NewArrival = () => {
                                         <span className={`property ${item.property === "Top Selling" ? 'topSelling' : ''} ${item.property === "Trending" ? 'topSelling' : ''} ${item.property === "New Arrival" ? 'bestseller' : ''} ${item.property === "Hot Product" ? 'hotProduct' : ''} ${item.property === "" ? 'p-0' : ''}`}>{item.property}</span>
                                     </div>
                                     <div className="product-name">{item.productName}</div>
+
                                     <div className="sizes" key={index}>
                                         {item.sizes.map((size, index) => (
                                             <small>{size.size}</small>
 
                                         ))}
                                     </div>
+                                    <p className='mt-[7px] w-full truncate whitespace-nowrap text-black text-start text-sm'>{item.Desc || "Best for Indian, Chinese dishes | Daily use"}</p>
+
                                     <div className="mrp">
+                                        
                                         {item.sizes.length > 0 && (
                                             <div className="mrp">
                                                 <div className="original-price">₹{item.sizes[0].originalPrice}</div>

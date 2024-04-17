@@ -42,6 +42,7 @@ const SingleProduct = () => {
         try {
             const response = await axios.post(`https://api.camrosteel.com/api/v1/single-product/${id}`)
             console.log(response.data.data)
+
             setInfo(response.data.data.addInfo)
             setSize(response.data.data.sizes)
             setImages(response.data.data.images)
@@ -125,7 +126,7 @@ const SingleProduct = () => {
             setSlideImage(imageUrls[0] || 'https://i.ibb.co/pPwsHpx/no-image-icon-23494.png');
         }
     }, [images]); // Include images in the dependency array to trigger the effect when images change
-    
+
 
     const changeImage = (index) => {
         const mainImage = images[index]?.img || slideImage; // Access image URL at the specified index or fallback to default
@@ -141,18 +142,18 @@ const SingleProduct = () => {
                         <div className="row">
                             <div className="col-12">
                                 <div className='big-img '>
-                                  
-                                        <img
-                                          
-                                            src={slideImage}
-                                            onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
-                                            alt="product-image"
-                                            loading='lazy'
-                                            className='imgd'
-                                            decoding='async'
-                                           // Call changeImage function with index as argument
-                                        />
-                                  
+
+                                    <img
+
+                                        src={slideImage}
+                                        onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
+                                        alt="product-image"
+                                        loading='lazy'
+                                        className='imgd'
+                                        decoding='async'
+                                    // Call changeImage function with index as argument
+                                    />
+
                                 </div>
                                 <div className='small-img'>
                                     {images && images.map((img, index) => (
@@ -168,44 +169,27 @@ const SingleProduct = () => {
                                         />
                                     ))}
                                 </div>
-                                {/* <img src={setData.images[0].img} alt="product-image" loading='lazy' decoding='async' /> */}
-                                {/* <div className="row">
-                                        <div className="col-3"><img src={images[0].img} alt="" /></div>
-                                        <div className="col-3"><img src={images[1].img} alt="" /></div>
-                                    </div> */}
-                            </div>
-                            <div className="col-md-12">
-                                {/* <div className="slider slide-show">
-                                    
-                                    {images && images.map((imgs,index)=>(
-                                        <div><img src={imgs.img} alt="" key={index} /></div>
-                                    ))}
-                                </div> */}
 
                             </div>
                             <div className="col-md-12">
-                                {/* <div className="slider slider-nav">
-                                    {images && images.map((imgs2,ind)=>(
-                                        <div><div className="img"><img src={imgs2.img} alt="" key={ind} /></div></div>
-                                    ))}
-                                </div> */}
 
-                                {/* <div className="slider slider-nav">
-                                    <div><div className="img"><img src={bn1} alt="" /></div></div>
-                                    <div><div className="img"><img src={bn2} alt="" /></div></div>
-                                    <div><div className="img"><img src={bn3} alt="" /></div></div>
-                                    <div><div className="img"><img src={bn4} alt="" /></div></div>
-                                </div> */}
+                            </div>
+                            <div className="col-md-12">
+
+
+
                             </div>
                         </div>
                     </div>
                     <div className="col-md-8">
                         <div className="details">
                             <h2>{singleData.productName}</h2>
+                            <p className='mt-2'>{singleData.Desc || "Best for Indian, Chinese dishes | Daily use"}</p>
+
                             <div className="pricing">
-                                <p>MRP : </p>
-                                <div className="actual-price">₹ {active ? (active.originalPrice) : (singleData.originalPrice)} </div>
-                                <div className="cut-price">₹   {active ? (active.discoPrice) : (singleData.discoPrice)}</div>
+                                <p>Offer Price : </p>
+                                <div className="actual-price">₹ {active ? (active.discoPrice) : (singleData.discoPrice)} </div>
+                                <div className="cut-price">₹{active ? (active.originalPrice) : (singleData.originalPrice)}</div>
                             </div>
                             <p className="desc">{singleData.Desc}</p>
 
@@ -247,9 +231,7 @@ const SingleProduct = () => {
                                     </div>
 
                                 </div>
-                                {/* <div className="buyNow">
-                                    <a href="javascript:void(0)">BUY IT NOW </a>
-                                </div> */}
+
 
 
                             </div>
@@ -265,7 +247,7 @@ const SingleProduct = () => {
                         </div>
                         <div className="pills">
                             <div className="single-pill pill1">
-                                <p className="text">Dish out your favorite recipes with the ultimate healthy twist! Our new top of the line Nutrimax Pressure Cooker cooks fast and comes with Maximum Nutrient Retention Technology (MNRT) enabling oil free faster cooking. Constructed using premium SAS metal technology this cooker is ultra hygienic and Induction Compatible.</p>
+                                <p className="text">Introducing Nutrimax: your ultimate kitchen upgrade! With Maximum Nutrient Retention Technology (MNRT) and premium SAS metal construction, our utensils ensure healthier, hygienic cooking. Compatible with induction cooktops, Nutrimax products make every meal a flavorful, nutritious delight.</p>
                                 <h5>Features:</h5>
                                 <ol>
                                     <li>

@@ -41,7 +41,7 @@ const Category = () => {
         </section>
 
         <section className='product-categories-page mt-5'>
-            <div className="container sm:w-[80%]">
+            <div className="container sm:w-[100%]">
                 <div className="row">
                     <div className="grid-cate">
                         {categ.map((item,index)=>(

@@ -183,13 +183,15 @@ const HotProducts = () => {
                                         <img loading="lazy" decoding="async" src={item.images[1].img} onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }} className="back-img" alt="" />
                                         <span className={`property ${item.property === "Top Selling" ? 'topSelling' : ''} ${item.property === "Trending" ? 'topSelling' : ''} ${item.property === "New Arrival" ? 'bestseller' : ''} ${item.property === "Hot-Product" ? 'hotProduct' : ''} ${item.property === "" ? 'p-0' : ''}`}>{item.property}</span>
                                     </div>
-                                    <div className="product-name">{item.productName}</div>
-                                    <div className="sizes" key={index}>
+                                    <div className="product-name whitespace-nowrap truncate">{item.productName}</div>
+                                    <div className="sizes truncate" key={index}>
                                         {item.sizes.map((size, index) => (
                                             <small>{size.size}</small>
 
                                         ))}
                                     </div>
+                                    <p className='mt-[7px] w-full truncate whitespace-nowrap text-black text-start text-sm'>{item.Desc || "Best for Indian, Chinese dishes | Daily use"}</p>
+
                                     <div className="mrp">
                                         {item.sizes.length > 0 && (
                                             <div className="mrp">

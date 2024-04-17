@@ -3,23 +3,30 @@
     width: 100%;
 }
 .main-product .product{
-    padding: 0.5rem;
+    border-radius: 14px;
+background-color: #b2aaa635;
+padding: 0.2rem 0.2rem;
 }
 .main-product a:hover{
     color: inherit;
 }
 .main-product .product .img{
     position: relative;
-    height: 200px;
+    height: 250px;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 10px;
     cursor: pointer;
     transition: all 400ms ease-in;
 }
+.main-cat-pro{
+    /* border: 1px solid ; */
+    width: 300px;
+    min-height: 300px;
+}
 .main-product .product .img>img{
     position: absolute;
-    object-fit: contain;
+    object-fit: fill;
     top: 0;
     bottom: 0;
     left: 0;
@@ -34,6 +41,7 @@
     right: 5%;
     /* background: #ff905a; */
     color: white;
+    font-size: 11px;
     border-radius: 5px;
     padding: 2px 5px;
 }
@@ -59,16 +67,22 @@
 
 .main-product .product .product-name{
     text-transform: uppercase;
-    color: black;
+    color: rgb(241, 24, 24);
+    padding: 0.2rem;
+    font-size: 1.2rem!important;
+    font-weight: 600;
 }
 .main-product .product .sizes{
     text-align: left;
+    margin-top: 5px;
 
 }
 .main-product .product .sizes small{
-    padding: 0rem 0.2rem;
-    border-radius: 2px;
-    border: 1px solid var(--color-grey);
+    padding: 0.2rem 0.6rem;
+    white-space: nowrap;
+    color: white;
+    background-color: red;
+    border: 1px solid white;
     margin-right: 0.3rem;
     /* transition: all 400ms ease-in; */
 }
@@ -79,6 +93,9 @@
 }
 .main-product .product .mrp{
     display: flex;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 5px;
     align-items: center;
 }
 .main-product .product .mrp strong{
@@ -117,12 +134,22 @@
 @media only screen and (max-width: 800px) {
     .main-product .product .img .property {
         font-size: 0.9rem;
+
+    }
+    .main-product .product {
+        width: 258px;
+       
     }
 }
+
 
 @media only screen and (max-width: 450px){
     .main-product .product .img .property {
         font-size: 0.8rem;
+    }
+    .main-product .product {
+        width: 198px;
+       
     }
     .main-product .product .img {
         height: 150px;
@@ -139,5 +166,13 @@
     }
     .main-product .product .grid-btn .addToCart {
         font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width:380px) {
+    .main-product .product {
+        width: 168px!important;
+       
     }
 }

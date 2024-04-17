@@ -47,6 +47,8 @@ const OurProducts = () => {
 
                                         ))}
                                     </div>
+                                    <p className='mt-[7px] w-full truncate whitespace-nowrap text-black text-start text-sm'>{item.Desc || "Best for Indian, Chinese dishes | Daily use"}</p>
+
                                     <div className="sizes">
                                         {item.sizes.length > 0 && (
                                             <div className="mrp">
